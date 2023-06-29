@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Demo from "./Demo";
 import Logo from "./Logo";
 import {Link, useNavigate} from "react-router-dom";
 
@@ -134,20 +133,6 @@ const HamburgerMenu = styled.span`
 
 const Navigation = () => {
   const [click, setClick] = useState(false);
-  const navigate = useNavigate();
-
-  const scrollTo = (id) => {
-    let element = document.getElementById(id);
-    if(!element) return navigate('/');
-
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
-
-    setClick(!click);
-  };
 
   return (
     <Section id="navigation">
@@ -157,12 +142,12 @@ const Navigation = () => {
           &nbsp;
         </HamburgerMenu>
         <Menu click={click}>
-          <MenuItem onClick={() => scrollTo("hero")}>Home</MenuItem>
-          <MenuItem onClick={() => scrollTo("about")}>About</MenuItem>
-          <MenuItem onClick={() => scrollTo("roadmap")}>Roadmap</MenuItem>
-          <MenuItem onClick={() => scrollTo("showcase")}>Showcase</MenuItem>
-          <MenuItem onClick={() => scrollTo("team")}>Team</MenuItem>
-          <MenuItem onClick={() => scrollTo("faq")}>Faq</MenuItem>
+          <Link to="/"><MenuItem>Home</MenuItem></Link>
+          <Link to="/upload"><MenuItem>Upload</MenuItem></Link>
+          <Link to="/list"><MenuItem>List</MenuItem></Link>
+          <Link to="/avatar"><MenuItem>Avatar</MenuItem></Link>
+          <Link to="/interview"><MenuItem>Interview</MenuItem></Link>
+          <Link to="/report"><MenuItem>Report</MenuItem></Link>
         </Menu>
       </NavBar>
     </Section>

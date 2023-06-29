@@ -20,6 +20,7 @@ ${'' /*
 body{
     font-family: OpenSans,SF Pro HK,SF Pro Display,SF Pro Icons,PingFang HK,Segoe UI,SegoeUI,Microsoft JhengHei,微軟正黑體,Helvetica Neue,Helvetica,Arial,sans-serif;
     overflow-x: hidden;
+    color: #363636;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -32,6 +33,9 @@ a{
 }
 .logo{
     width: 76px;
+}
+.mark-value{
+    
 }
 `
 

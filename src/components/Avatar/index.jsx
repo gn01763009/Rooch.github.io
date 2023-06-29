@@ -29,7 +29,7 @@ function Avatar() {
   const navigate = useNavigate();
   return (
     <div className='flex flex-col gap-5'>
-      <h1 className="text-2xl font-bold text-center">Our interviewers</h1>
+      <h1 className="text-5xl font-bold text-center mb-6">Our Interviewers</h1>
       <div className="flex flex-wrap justify-between w-full gap-5">
         {avatars.map((avatar, idx) => {
           return (

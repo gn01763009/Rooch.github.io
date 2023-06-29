@@ -25,11 +25,10 @@ background-color: ${props => props.theme.body};
 const Container = styled.div`
 width: 75%;
 min-height: 80vh;
-margin: 0 auto;
+margin: 2rem auto 0;
 
 display: flex;
 justify-content: center;
-align-items: center;
 
 @media (max-width: 64em) {
   width: 85%;

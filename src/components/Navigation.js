@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import Button from "./Button";
 import Logo from "./Logo";
 import {Link} from "react-router-dom";
 
@@ -144,12 +145,15 @@ const Navigation = () => {
           &nbsp;
         </HamburgerMenu>
         <Menu click={click}>
-          <Link to="/"><MenuItem>Home</MenuItem></Link>
-          <Link to="/lists"><MenuItem>Lists</MenuItem></Link>
-          <Link to="/avatar"><MenuItem>Avatar</MenuItem></Link>
-          <Link to="/interview"><MenuItem>Interview</MenuItem></Link>
-          <Link to="/report"><MenuItem>Report</MenuItem></Link>
+          <MenuItem>
+            <div className="mobile">
+              <Link to="/lists"><Button text="Find some jobs"/></Link>
+            </div>
+          </MenuItem>
         </Menu>
+        <div className="desktop">
+          <Link to="/lists"><Button text="Find some jobs"/></Link>
+        </div>
       </NavBar>
     </Section>
   );

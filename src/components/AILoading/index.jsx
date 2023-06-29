@@ -4,7 +4,7 @@ import AILoading from "./ai-loading.json";
 import { useNavigate } from 'react-router-dom';
 
 
-const loadingData = ["3000萬+ 公司資料…", "930萬+ 求職者資料…", "1000萬+ 模擬資料…"]
+const loadingData = ["30+ million company data...", "9+ million job seeker data...", "10+ million simulated data..."]
 
 const Loading = () => {
   const [state, setState] = useState(0);
@@ -31,9 +31,9 @@ const Loading = () => {
   },[])
 
     return (
-        <div className='flex flex-col pt-5 pb-10'>
+        <div className='flex flex-col pt-20 pb-10'>
           <h1 className='text-2xl font-bold text-center'>Rooch AI Loading….</h1>
-          <Lottie className='w-2/3 mx-auto -my-10 md:-my-28' animationData={AILoading} />
+          <Lottie className='w-2/3 mx-auto -my-10 md:-my-40' animationData={AILoading} />
           <div ref={wording} className='text-center p-2 text-lg font-bold leading-7_5 animate__animated animate__faster'>{loadingData[state]}</div>
         </div>
     );

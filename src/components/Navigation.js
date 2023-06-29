@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Demo from "./Demo";
 import Logo from "./Logo";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const Section = styled.section`
   width: 100vw;
@@ -134,9 +134,11 @@ const HamburgerMenu = styled.span`
 
 const Navigation = () => {
   const [click, setClick] = useState(false);
+  const navigate = useNavigate();
 
   const scrollTo = (id) => {
     let element = document.getElementById(id);
+    if(!element) return navigate('/');
 
     element.scrollIntoView({
       behavior: "smooth",
@@ -155,7 +157,7 @@ const Navigation = () => {
           &nbsp;
         </HamburgerMenu>
         <Menu click={click}>
-          <MenuItem onClick={() => scrollTo("home")}>Home</MenuItem>
+          <MenuItem onClick={() => scrollTo("hero")}>Home</MenuItem>
           <MenuItem onClick={() => scrollTo("about")}>About</MenuItem>
           <MenuItem onClick={() => scrollTo("roadmap")}>Roadmap</MenuItem>
           <MenuItem onClick={() => scrollTo("showcase")}>Showcase</MenuItem>

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Button from "./Button";
+import Demo from "./Demo";
 import Logo from "./Logo";
+import {Link} from "react-router-dom";
 
 const Section = styled.section`
   width: 100vw;
@@ -149,7 +150,7 @@ const Navigation = () => {
   return (
     <Section id="navigation">
       <NavBar>
-        <Logo />
+      <Link to="/"><Logo /></Link>
         <HamburgerMenu click={click} onClick={() => setClick(!click)}>
           &nbsp;
         </HamburgerMenu>
@@ -160,15 +161,7 @@ const Navigation = () => {
           <MenuItem onClick={() => scrollTo("showcase")}>Showcase</MenuItem>
           <MenuItem onClick={() => scrollTo("team")}>Team</MenuItem>
           <MenuItem onClick={() => scrollTo("faq")}>Faq</MenuItem>
-          <MenuItem>
-            <div className="mobile">
-              <Button text="Connect Wallet" link="https://google.com" />
-            </div>
-          </MenuItem>
         </Menu>
-        <div className="desktop">
-          <Button text="Connect Wallet" link="https://google.com" />
-        </div>
       </NavBar>
     </Section>
   );

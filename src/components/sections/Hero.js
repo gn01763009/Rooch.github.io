@@ -105,9 +105,9 @@ font-size:${props => props.theme.fontlg};
 
 `
 
-const Home = () => {
+const Hero = () => {
   return (
-    <Section id="home">
+    <Section id="hero">
       <Container>
       <Box>
         <Suspense fallback={<Loading />}>
@@ -132,4 +132,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Hero

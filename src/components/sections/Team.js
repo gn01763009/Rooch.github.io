@@ -1,14 +1,11 @@
 import React, { lazy, Suspense } from 'react'
 import styled from 'styled-components';
 
-import img2 from '../../assets/Nfts/head-1.webp';
-import img3 from '../../assets/Nfts/head-2.webp';
-import img4 from '../../assets/Nfts/head-3.webp';
-import img5 from '../../assets/Nfts/head-4.webp';
-import img6 from '../../assets/Nfts/head-5.webp';
-import img7 from '../../assets/Nfts/head-6.webp';
-import img8 from '../../assets/Nfts/head-7.webp';
-import img9 from '../../assets/Nfts/head-8.webp';
+import img2 from '../../assets/Members/member-1.png';
+import img3 from '../../assets/Members/member-2.png';
+import img4 from '../../assets/Members/member-3.png';
+import img5 from '../../assets/Members/member-4.png';
+import img6 from '../../assets/Members/member-5.png';
 import Loading from '../Loading';
 // import ConfettiComponent from '../Confetti';
 
@@ -141,14 +138,11 @@ const Team = () => {
         <ConfettiComponent /> </Suspense>
       <Title>Team</Title>
       <Container>
-        <MemberComponent img={img2} name="Reggie Lien" position="Co-Founder" />
-        <MemberComponent img={img3} name="Sam Huang" position="Director" />
-        <MemberComponent img={img4} name="Uncle Wes" position="Manager" />
+        <MemberComponent img={img3} name="Reggie Lien" position="Co-Founder" />
+        <MemberComponent img={img6} name="Sam Huang" position="Director" />
+        <MemberComponent img={img2} name="Uncle Wes" position="Manager" />
         <MemberComponent img={img5} name="Yuting Kuo" position="Artist" />
-        <MemberComponent img={img6} name="Nicole Yang" position="Social media manager" />
-
-
-
+        <MemberComponent img={img4} name="Nicole Yang" position="Social media manager" />
       </Container>
     </Section>
   )

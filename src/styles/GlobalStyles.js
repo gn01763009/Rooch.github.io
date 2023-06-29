@@ -18,7 +18,7 @@ ${'' /*
 }
 
 body{
-    font-family: 'Sora', sans-serif;
+    font-family: OpenSans,SF Pro HK,SF Pro Display,SF Pro Icons,PingFang HK,Segoe UI,SegoeUI,Microsoft JhengHei,微軟正黑體,Helvetica Neue,Helvetica,Arial,sans-serif;
     overflow-x: hidden;
 }
 

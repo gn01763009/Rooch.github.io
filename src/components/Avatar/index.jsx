@@ -1,7 +1,7 @@
 import React from 'react'
 import img1 from '../../assets/Nfts/head-5.webp';
 import img2 from '../../assets/Nfts/head-4.webp';
-import img3 from '../../assets/Nfts/head-1.webp';
+import img3 from '../../assets/Nfts/head-2.webp';
 import { useNavigate } from 'react-router-dom';
 
 const avatars = [

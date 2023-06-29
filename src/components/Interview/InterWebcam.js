@@ -3,16 +3,17 @@ import styled from 'styled-components'
 import Webcam from "react-webcam";
 
 const WebcamContainer = styled.div`
-    position: fixed;
-    bottom: -60px;
-    right: 48px;
+    position: absolute;
+    z-index: 100;
+    bottom: 24px;
+    right: 24px;
 `
 
 const InterWebcam = () => {
 
     return (
         <WebcamContainer>
-            <Webcam height={400} width={300} />
+            <Webcam height={300} width={225} />
         </WebcamContainer>
     );
 }

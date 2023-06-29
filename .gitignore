@@ -6,9 +6,6 @@
 # Testing directories
 /coverage
 
-# Production build directory
-/build
-
 # Cache and logs
 /.cache
 /.npm

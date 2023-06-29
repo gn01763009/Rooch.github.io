@@ -3,13 +3,13 @@ import { light } from "./styles/Themes";
 import { ThemeProvider } from "styled-components";
 import { Route, Routes } from 'react-router-dom';
 import styled from 'styled-components'
+import './index.css';
 
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
-import Upload from "./components/Upload";
-import List from "./components/List";
+import Lists from "./components/Lists";
 import Avatar from "./components/Avatar";
 import Interview from "./components/Interview";
 import Report from "./components/Report";
@@ -53,8 +53,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/interview" element={<Section><Interview /></Section>} />
-            <Route path="/upload" element={<Section><Container><Upload /></Container></Section>} />
-            <Route path="/list" element={<Section><Container><List /></Container></Section>} />
+            <Route path="/lists" element={<Section><Container><Lists /></Container></Section>} />
             <Route path="/avatar" element={<Section><Container><Avatar /></Container></Section>} />
             <Route path="/report" element={<Section><Container><Report /></Container></Section>} />
           </Routes>

@@ -43,7 +43,7 @@ const Video = () => {
     const videos = [video_1, video_2, video_3];
     const [firstTime, setFirstTime] = React.useState(true);
     const [current, setCurrent] = React.useState(0);
-    const [title, setTitle] = React.useState("面試開始");
+    const [title, setTitle] = React.useState("start practice");
     const [isEnd, setIsEnd] = React.useState(false);
     const navigate = useNavigate();
 
@@ -54,18 +54,18 @@ const Video = () => {
 
     const playVideo = () => {
         let playPromise
-        if(isEnd){
+        if (isEnd) {
             navigate('/report');
         }
-        if(!firstTime) {
-            if(current >= 2) {
-                setTitle("面試結束");
+        if (!firstTime) {
+            if (current >= 2) {
+                setTitle("Finish");
                 setIsEnd(true);
-            }else{
+            } else {
                 setCurrent(current < 2 ? current + 1 : 2);
                 playPromise = vidRef.current.play();
             }
-        }else{
+        } else {
             setTitle("");
             playPromise = vidRef.current.play();
         }
@@ -77,9 +77,9 @@ const Video = () => {
                 console.log("playing");
                 vidRef.current.play();
             })
-            .catch(error => {
+                .catch(error => {
 
-            });
+                });
         }
     }
 
@@ -88,8 +88,8 @@ const Video = () => {
             <CoverContainer>
                 {title}
             </CoverContainer>
-            <InterWebcam /> 
-            <video id="interviewVideo" ref={vidRef} src={videos[current]} type="video/mp4" onClick={playVideo}/>
+            <InterWebcam />
+            <video id="interviewVideo" ref={vidRef} src={videos[current]} type="video/mp4" onClick={playVideo} />
         </VideoContainer>
     );
 }

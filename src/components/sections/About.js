@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 // import Carousel from '../Carousel'
 import Button from '../Button'
-import {dark} from '../../styles/Themes';
+import { dark } from '../../styles/Themes';
 import Loading from '../Loading';
 
 
@@ -60,7 +60,7 @@ align-items: center;
   min-height: 50vh;
 }
 `
- 
+
 const Title = styled.h2`
   font-size: ${(props) => props.theme.fontxxl};
   text-transform: capitalize;
@@ -149,25 +149,31 @@ const About = () => {
   return (
     <Section id="about">
       <Container>
-        <Box> 
-        <Suspense fallback={<Loading />}>
-          <Carousel /> </Suspense> </Box>
-        <Box> 
-        <Title>
-        Welcome To The <br /> Weirdos Club.
-        </Title>
-        <SubText>
-        The WEIRDOS CLUB is a private collection of NFTs—unique digital collectibles. The Weirdos are stored as ERC-721 tokens on the Ethereum blockchain and hosted on IPFS.
-        </SubText>
-        <SubTextLight>
-        With more than 200+ hand drawn traits, each NFT is unique and comes with a membership to an exclusive group of successful investors. Join an ambitious ever-growing community with multiple benefits and utilities.
-        </SubTextLight>
-        <ButtonContainer>
-        <ThemeProvider theme={dark}>
-        <Button text="JOIN OUR DISCORD" link="#" />
-        </ThemeProvider>
-        </ButtonContainer>
-         </Box>
+        <Box>
+          <Suspense fallback={<Loading />}>
+            <Carousel /> </Suspense> </Box>
+        <Box>
+          <Title>
+            Elevate Your Interview Success
+          </Title>
+          <SubText>
+            An innovative AI platform designed to help interviewees enhance their chances of success
+          </SubText>
+          <SubTextLight>
+            Here is what we have : <br />
+            🎧 Interview Stage Simulations <br />
+            👄 Foreign Language Interview Practice <br />
+            📝 Real-time Feedback and Suggestions <br />
+            📊 Professional Assessment and Reports <br />
+            🤝 User-Friendly Interface <br />
+          </SubTextLight>
+
+          <ButtonContainer>
+            <ThemeProvider theme={dark}>
+              <Button text="Try it out" link="/interview" />
+            </ThemeProvider>
+          </ButtonContainer>
+        </Box>
       </Container>
     </Section>
   )

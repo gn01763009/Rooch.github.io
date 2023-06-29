@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import LogoImg from '../assets/rooch-logo.png'
 
 const LogoText = styled.h1`
 font-family: 'Akaya Telivigala', cursive;
@@ -22,7 +23,7 @@ const Logo = () => {
   return (
     <LogoText>
         <Link to="/">
-        W.
+          <img className='logo' src={LogoImg} alt="logo" />
         </Link>
     </LogoText>
   )

@@ -12,7 +12,7 @@ const NavBar = styled.nav`
   justify-content: space-between;
   align-items: center;
 
-  width: 85%;
+  width: 75%;
   height: ${(props) => props.theme.navHeight};
   margin: 0 auto;
 
@@ -167,7 +167,7 @@ const Navigation = () => {
           </MenuItem>
         </Menu>
         <div className="desktop">
-          <Button text="Connect Wallet" link="https://google.com" />
+          <Button text="開始使用" link="https://google.com" />
         </div>
       </NavBar>
     </Section>

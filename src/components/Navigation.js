@@ -162,9 +162,6 @@ const Navigation = () => {
           <MenuItem onClick={() => scrollTo("team")}>Team</MenuItem>
           <MenuItem onClick={() => scrollTo("faq")}>Faq</MenuItem>
         </Menu>
-        <div className="desktop">
-          <Button text="開始使用" link="https://google.com" />
-        </div>
       </NavBar>
     </Section>
   );

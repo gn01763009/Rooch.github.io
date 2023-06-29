@@ -1,4 +1,5 @@
-import React, { useLayoutEffect, useEffect, useRef, navgate } from "react";
+import React, { useLayoutEffect, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from 'styled-components'
 import video_1 from "../../assets/Avatars/avatar_indian_1.mp4"
 import video_2 from "../../assets/Avatars/avatar_indian_2.mp4"
@@ -44,6 +45,7 @@ const Video = () => {
     const [current, setCurrent] = React.useState(0);
     const [title, setTitle] = React.useState("面試開始");
     const [isEnd, setIsEnd] = React.useState(false);
+    const navigate = useNavigate();
 
     useLayoutEffect(() => {
         vidRef.current.src = videos[current];
@@ -53,7 +55,7 @@ const Video = () => {
     const playVideo = () => {
         let playPromise
         if(isEnd){
-            window.location.replace('/report');
+            navigate('/report');
         }
         if(!firstTime) {
             if(current >= 2) {

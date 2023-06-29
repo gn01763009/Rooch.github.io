@@ -23,7 +23,7 @@ const Logo = () => {
   return (
     <LogoText>
         <Link to="/" style={{display:'flex', alignItems:'center'}}>
-          <img src={RoochLogo} height={100} width={100} alt='logo'/>
+          <img src={RoochLogo} height={76} width={76} alt='logo'/>
         </Link>
     </LogoText>
   )

@@ -13,7 +13,7 @@ const NavBar = styled.nav`
   justify-content: space-between;
   align-items: center;
 
-  width: 85%;
+  width: 75%;
   height: ${(props) => props.theme.navHeight};
   margin: 0 auto;
 

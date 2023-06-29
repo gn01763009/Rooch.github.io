@@ -1,33 +1,13 @@
-
-
 import GlobalStyles from "./styles/GlobalStyles";
 import { light } from "./styles/Themes";
 import { ThemeProvider } from "styled-components";
-
-// import { lazy, Suspense } from "react";
-// import Loading from "./components/Loading";
-
-// Below Imports using React.lazy and Suspence
-
-// const Navigation = lazy(() => import("./components/Navigation"));
-// const Home = lazy(() => import("./components/sections/Home"));
-// const About = lazy(() => import("./components/sections/About"));
-// const Roadmap = lazy(() => import("./components/sections/Roadmap"));
-// const Team = lazy(() => import("./components/sections/Team"));
-// const Showcase = lazy(() => import("./components/sections/Showcase"));
-// const Faq = lazy(() => import("./components/sections/Faq"));
-// const Footer = lazy(() => import("./components/Footer"));
-// const ScrollToTop = lazy(() => import("./components/ScrollToTop"));
+import { Route, Routes } from 'react-router-dom';
 
 import Navigation from "./components/Navigation";
-import About from "./components/sections/About";
-import Home from "./components/sections/Home";
-import Roadmap from "./components/sections/Roadmap";
-import Team from "./components/sections/Team";
+import Home from "./components/Home/Home";
 import Footer from "./components/Footer";
-import Showcase from "./components/sections/Showcase";
-import Faq from "./components/sections/Faq";
 import ScrollToTop from "./components/ScrollToTop";
+import Demo from "./components/Demo";
 
 function App() {
   return (
@@ -36,15 +16,13 @@ function App() {
       <ThemeProvider theme={light}>
         {/* <Suspense fallback={<Loading />}> */}
           <Navigation />
-          <Home />
-          <About />
-          <Roadmap />
-          <Showcase />
-          <Team />
-          <Faq />
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/demo" element={<Demo />} />
+          </Routes>
           <Footer />
           {/* <ScrollToTop scrollPosition={y}/> */}
-          <ScrollToTop />{" "}
+          <ScrollToTop />
         {/* </Suspense> */}
       </ThemeProvider>
     </main>

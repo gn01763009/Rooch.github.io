@@ -40,11 +40,7 @@ const Spinner = styled.div`
 const Loading = () => {
  
     return (
-      
         <Loader>
-          
-            
-
             <Spinner>
               <div />
               <div />
@@ -52,7 +48,6 @@ const Loading = () => {
               <div />
             </Spinner>
         </Loader>
-      
     );
   
 };

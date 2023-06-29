@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import LogoImg from '../assets/rooch-logo.png'
+import RoochLogo from '../assets/rooch-logo.png'
 
 const LogoText = styled.h1`
 font-family: 'Akaya Telivigala', cursive;
@@ -22,8 +22,8 @@ font-size: ${props => props.theme.fontxxl};
 const Logo = () => {
   return (
     <LogoText>
-        <Link to="/">
-          <img className='logo' src={LogoImg} alt="logo" />
+        <Link to="/" style={{display:'flex', alignItems:'center'}}>
+          <img src={RoochLogo} height={76} width={76} alt='logo'/>
         </Link>
     </LogoText>
   )

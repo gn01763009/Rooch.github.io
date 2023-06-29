@@ -52,7 +52,7 @@ function App() {
           <Navigation />
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route path="/interview" element={<Section><Container><Interview /></Container></Section>} />
+            <Route path="/interview" element={<Section><Interview /></Section>} />
             <Route path="/upload" element={<Section><Container><Upload /></Container></Section>} />
             <Route path="/list" element={<Section><Container><List /></Container></Section>} />
             <Route path="/avatar" element={<Section><Container><Avatar /></Container></Section>} />

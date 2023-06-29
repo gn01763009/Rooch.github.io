@@ -118,37 +118,51 @@ img{
 
 }
 `
+const Title = styled.h1`
+  font-size: ${(props) => props.theme.fontxxl};
+  text-transform: capitalize;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  border-bottom: 2px solid ${(props) => props.theme.text};
+  width: fit-content;
 
-const NftItem = ({img, number=0, price=0, passRef}) => {
+  @media (max-width: 40em) {
+    font-size: ${(props) => props.theme.fontxl};
+  }
+`;
+const NftItem = ({ img, name = "", offer = "", price = "", passRef }) => {
 
-let play = (e) => {
-  passRef.current.style.animationPlayState = 'running';
-}
-let pause = (e) => {
-  passRef.current.style.animationPlayState = 'paused';
-}
+  let play = (e) => {
+    passRef.current.style.animationPlayState = 'running';
+  }
+  let pause = (e) => {
+    passRef.current.style.animationPlayState = 'paused';
+  }
 
 
-  return(
-    <ImgContainer   onMouseOver={e => pause(e) }  onMouseOut={e => play(e) }  >
-      <img width={500} height={400}  src={img} alt="The Weirdos" />
+  return (
+    <ImgContainer onMouseOver={e => pause(e)} onMouseOut={e => play(e)}  >
+      <img width={500} height={400} src={img} alt="The Weirdos" />
       <Details>
         <div>
-          <span>Weirdos</span> <br />
-          <h1>#{number}</h1>
-        </div>
+          <span>Name</span> <br />
+          <h1>{name}</h1>
+          <span>Get offer</span> <br />
+          <h1>{offer}</h1>
 
-        <div>
-          <span>Price</span>
+          <span>Salary</span>
           <Price>
-          <img width={200} height={200}  src={ETH} alt="ETH" />
-          <h1>{Number(price).toFixed(1)}</h1>
+            <img width={200} height={200} src={ETH} alt="ETH" />
+            <h1>{price}</h1>
           </Price>
         </div>
       </Details>
     </ImgContainer>
   )
-} 
+}
 
 
 const Showcase = () => {
@@ -156,25 +170,29 @@ const Showcase = () => {
   const Row1Ref = useRef(null);
   const Row2Ref = useRef(null);
 
-  return(
+  return (
+
     <Section id="showcase">
-    <Row direction="none" ref={Row1Ref}>
-      <NftItem img={img2}  number={123} price={1.2}   passRef = {Row1Ref} />
-      <NftItem img={img3}  number={456} price={2.5}   passRef = {Row1Ref} />
-      <NftItem img={img4}  number={666} price={3.5}   passRef = {Row1Ref} />
-      <NftItem img={img5}  number={452} price={4.7}   passRef = {Row1Ref} />
+      <Title>Success Story</Title>
+
+      <Row direction="none" ref={Row1Ref}>
+
+        <NftItem img={img2} name={"Benjamin Anderson"} offer={"Apple Inc."} price={"US$162,364"} passRef={Row1Ref} />
+        <NftItem img={img3} name={"Emily Davis"} offer={"Amazon"} price={"US$129,610"} passRef={Row1Ref} />
+        <NftItem img={img4} name={"William Johnson"} offer={"Microsoft"} price={"US$212,164"} passRef={Row1Ref} />
+        <NftItem img={img5} name={"Olivia Martinez"} offer={"Facebook"} price={"US$192,000"} passRef={Row1Ref} />
 
 
-    </Row>
-    <Row direction="reverse" ref={Row2Ref}>
-    <NftItem img={img6}  number={888} price={1.2}   passRef = {Row2Ref} />
-    <NftItem img={img7}  number={211} price={3.2}   passRef = {Row2Ref} />
-    <NftItem img={img8}  number={455} price={1.8}   passRef = {Row2Ref} />
-    <NftItem img={img9}  number={456} price={5.1}   passRef = {Row2Ref} />
+      </Row>
+      <Row direction="reverse" ref={Row2Ref}>
+        <NftItem img={img6} name={"Alexander Thompson"} offer={"Google"} price={"US$436,198"} passRef={Row2Ref} />
+        <NftItem img={img7} name={"Sophia Wilson"} offer={"Tesla"} price={"US$222,176"} passRef={Row2Ref} />
+        <NftItem img={img8} name={"James Harris"} offer={"Netflix"} price={"US$462,836"} passRef={Row2Ref} />
+        <NftItem img={img9} name={"Ava Miller"} offer={"Intel Corporation"} price={"US$122,876"} passRef={Row2Ref} />
 
 
-    </Row>
-    </Section>
+      </Row>
+    </Section >
   )
 }
 

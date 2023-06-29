@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
-import {Link, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const Section = styled.section`
   width: 100vw;
   background-color: ${(props) => props.theme.body};
 `;
+
 const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
@@ -29,6 +30,7 @@ const NavBar = styled.nav`
     }
   }
 `;
+
 const Menu = styled.ul`
   display: flex;
   justify-content: space-between;

@@ -77,33 +77,31 @@ const ButtonContainer = styled.div`
 const TypeWriterText = () => {
   return (
     <>
-        <Title>
-      Discover a new era of cool
-      <Typewriter
-        options={{
-          autoStart: true,
-          loop: true,
-        }}
-        onInit={(typewriter) => {
-          typewriter
-            .typeString(`<span class="text-1">NFTs.</span>`)
-            .pauseFor(2000)
-            .deleteAll()
-            .typeString(`<span class="text-2">Collectible Items.</span>`)
-            .pauseFor(2000)
-            .deleteAll()
-            .typeString(`<span class="text-3">Ape Killers!</span>`)
-            .pauseFor(2000)
-            .deleteAll()
-            .start();
-        }}
-      />
-      
-    </Title>
-    <SubTitle>Bored Of Apes? Try Something New.</SubTitle>
-    <ButtonContainer>
-      <Link to="/list"><Button text="Demo" link="/list" /></Link>
-    </ButtonContainer>
+      <Title>
+        Unleash Your Interview Potential
+        <Typewriter
+          options={{
+            autoStart: true,
+            loop: true,
+          }}
+          onInit={(typewriter) => {
+            typewriter
+              .typeString(`<span class="text-1">AI-power.</span>`)
+              .pauseFor(2000)
+              .deleteAll()
+              .typeString(`<span class="text-3">Get the job!</span>`)
+              .pauseFor(2000)
+              .deleteAll()
+              .start();
+          }}
+        />
+
+      </Title>
+      <SubTitle>Receive personalized guidance and feedback from our AI interview coach
+      </SubTitle>
+      <ButtonContainer>
+        <Link to="/lists"><Button text="Demo" link="/lists" /></Link>
+      </ButtonContainer>
     </>
   );
 };

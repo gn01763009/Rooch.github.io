@@ -173,21 +173,17 @@ const Showcase = () => {
   return (
     <Section id="showcase">
       <Title>Success Story</Title>
-      <Row direction="none" ref={Row1Ref}>
+      <Row direction="none" ref={Row1Ref} style={{animationDuration: '20s'}}>
         <NftItem img={img2} name={"Benjamin Anderson"} offer={"Apple Inc."} price={"US$162,364"} passRef={Row1Ref} />
         <NftItem img={img3} name={"Emily Davis"} offer={"Amazon"} price={"US$129,610"} passRef={Row1Ref} />
         <NftItem img={img4} name={"William Johnson"} offer={"Microsoft"} price={"US$212,164"} passRef={Row1Ref} />
         <NftItem img={img5} name={"Olivia Martinez"} offer={"Facebook"} price={"US$192,000"} passRef={Row1Ref} />
-
-
       </Row>
-      <Row direction="reverse" ref={Row2Ref}>
+      <Row direction="reverse" ref={Row2Ref} style={{animationDuration: '15s'}}>
         <NftItem img={img6} name={"Alexander Thompson"} offer={"Google"} price={"US$436,198"} passRef={Row2Ref} />
         <NftItem img={img7} name={"Sophia Wilson"} offer={"Tesla"} price={"US$222,176"} passRef={Row2Ref} />
         <NftItem img={img8} name={"James Harris"} offer={"Netflix"} price={"US$462,836"} passRef={Row2Ref} />
         <NftItem img={img9} name={"Ava Miller"} offer={"Intel Corporation"} price={"US$122,876"} passRef={Row2Ref} />
-
-
       </Row>
     </Section >
   )

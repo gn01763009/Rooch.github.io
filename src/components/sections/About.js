@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from 'styled-components'
 import Button from '../Button'
 import { dark } from '../../styles/Themes';
 import Loading from '../Loading';
+import { Link } from "react-router-dom";
 
 
 const Carousel = lazy(() => import("../Carousel"));
@@ -170,7 +171,7 @@ const About = () => {
 
           <ButtonContainer>
             <ThemeProvider theme={dark}>
-              <Button text="Try it out" link="/interview" />
+              <Link to="/lists"><Button text="Try it out" link="/lists" /></Link>
             </ThemeProvider>
           </ButtonContainer>
         </Box>

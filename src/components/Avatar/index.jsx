@@ -32,7 +32,7 @@ function Avatar() {
   const navigate = useNavigate();
   return (
     <div className='flex flex-col gap-5'>
-      <h1 className="text-2xl font-bold text-center">Our interviewers</h1>
+      <h1 className="text-5xl font-bold text-center mb-6">Our Interviewers</h1>
       <div className="flex flex-wrap justify-between w-full gap-5">
         {avatars.map((avatar, idx) => {
           return (
@@ -44,7 +44,7 @@ function Avatar() {
             <p className="text-sm">Position : {avatar.position}</p>
             <p className="text-sm">Language : {avatar.language}</p>
             <p className="text-sm">Country : {avatar.country}</p>
-            <button onClick={() => {navigate('/loading')}} className="w-full p-3 bg-gray-100 rounded-md hover:bg-gray-300">
+            <button onClick={() => {navigate('/loading')}} className="w-full p-3 rounded-md btn-secondary">
               Start 🚀
             </button>
           </div>

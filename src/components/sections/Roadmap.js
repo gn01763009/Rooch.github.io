@@ -210,7 +210,7 @@ const Roadmap = () => {
   }, []);
 
   return (
-    <Section id="roadmap">
+    <Section className="py-8" id="roadmap">
       <Title>Your Stage </Title>
       <Container>
         <SvgContainer>

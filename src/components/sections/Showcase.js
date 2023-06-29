@@ -172,7 +172,7 @@ const Showcase = () => {
 
   return (
 
-    <Section id="showcase">
+    <Section className="py-8" id="showcase">
       <Title>Success Story</Title>
       <Row direction="none" ref={Row1Ref} style={{animationDuration: '20s'}}>
         <NftItem img={img2} name={"Benjamin Anderson"} offer={"Apple Inc."} price={"US$162,364"} passRef={Row1Ref} />

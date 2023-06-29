@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import styled from 'styled-components'
 import video_1 from "../../assets/Avatars/avatar_indian_1.mp4"
 import video_2 from "../../assets/Avatars/avatar_indian_2.mp4"
@@ -8,7 +8,7 @@ import {useNavigate} from "react-router-dom";
 
 const VideoContainer = styled.div`
 position: relative;
-
+background-color: #0f3367;
 width: 100%;
 
 #interviewVideo{
@@ -22,44 +22,61 @@ width: 100%;
 `
 
 const CoverContainer = styled.div`
-    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    pointer-events: none;
+    position: fixed;
     padding: 54px;
-    text-align: center;
-    font-size: 160px;
+    z-index: 999;
+    top: 0;
+    font-size:120px;
     color: white;
-    top: calc( 50% - 119px);
     width: 100%;
-    -webkit-text-stroke: 5px black;
+    height: 100%;
+    display: flex;
+    item-align: center;
     text-shadow:
        5px 5px 0 #000,
      -1px -1px 0 #000,  
       1px -1px 0 #000,
       -1px 1px 0 #000,
        1px 1px 0 #000;
+    div{
+        margin: auto;
+        font-weight: 700;
+    }
 `
 
 const Video = () => {
     const vidRef = useRef(null);
+    const coverRef = useRef(null);
     const videos = [video_1, video_2, video_3];
     const [firstTime, setFirstTime] = React.useState(true);
     const [current, setCurrent] = React.useState(0);
-    const [title, setTitle] = React.useState("start practice");
+    const [title, setTitle] = React.useState("Start practice");
     const [isEnd, setIsEnd] = React.useState(false);
     const navigate = useNavigate();
 
     useLayoutEffect(() => {
-        vidRef.current.src = videos[current];
         window.scrollTo(0, 80);
+        vidRef.current.src = videos[current];
     })
 
     const playVideo = () => {
-        let playPromise
+        let playPromise;
         if (isEnd) {
             navigate('/report');
+            return;
         }
         if (!firstTime) {
             if (current >= 2) {
-                setTitle("Finish");
+                vidRef.current.pause();
+                coverRef.current.classList.remove("animate__animated");
+                coverRef.current.classList.remove("animate__fadeOut");
+                setTimeout(() => {
+                    setTitle("Finish");
+                    coverRef.current.classList.add("animate__animated");
+                    coverRef.current.classList.add("animate__fadeIn");
+                }, 100);
                 setIsEnd(true);
             } else {
                 setCurrent(current < 2 ? current + 1 : 2);
@@ -67,6 +84,9 @@ const Video = () => {
             }
         } else {
             setTitle("");
+            coverRef.current.classList.add("animate__animated");
+            coverRef.current.classList.add("animate__fadeOut");
+            // coverRef.current.style.display = "none";
             playPromise = vidRef.current.play();
         }
         vidRef.current.src = videos[current];
@@ -85,8 +105,8 @@ const Video = () => {
 
     return (
         <VideoContainer>
-            <CoverContainer>
-                {title}
+            <CoverContainer ref={coverRef}>
+                <div>{title}</div>
             </CoverContainer>
             <InterWebcam />
             <video id="interviewVideo" ref={vidRef} src={videos[current]} type="video/mp4" onClick={playVideo} />

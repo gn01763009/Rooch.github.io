@@ -146,19 +146,19 @@ const Footer = () => {
       >
         <Facebook />
       </a>
-      <a href="https://www.instagram.com/code.bucks/" target='_blank' 
+      <a href="https://www.instagram.com/" target='_blank' 
       rel="noopener noreferrer"
       aria-label='instagram'
       >
         <Instagram />
       </a>
-      <a href="https://twitter.com/code_bucks" target='_blank' 
+      <a href="https://twitter.com/" target='_blank' 
       rel="noopener noreferrer"
       aria-label='twitter'
       >
         <Twitter />
       </a>
-      <a href="https://www.linkedin.com/in/codebucks/" target='_blank' 
+      <a href="https://www.linkedin.com/" target='_blank' 
       rel="noopener noreferrer"
       aria-label='linkedin'
       >
@@ -172,18 +172,12 @@ const Footer = () => {
           <Item onClick={() => scrollTo('roadmap')}  >Roadmap</Item>
           <Item onClick={() => scrollTo('showcase')}  >Showcase</Item>
           <Item onClick={() => scrollTo('team')}  >Team</Item>
-          <Item onClick={() => scrollTo('faq')}  >Faq</Item>
 
     </MenuItems>
       </Container>
       <Bottom>
         <span>
-          &copy; {new Date().getFullYear()} Weirdos Club. All rights reserved.
-        </span>
-        <span>
-          Made with &#10084; by <a href="https://devdreaming.com/about" target="_blank" rel="dofollow noreferrer">
-            CodeBucks
-          </a>
+          &copy; {new Date().getFullYear()} Rooch.ai. All rights reserved.
         </span>
       </Bottom>
     </Section>

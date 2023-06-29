@@ -13,7 +13,7 @@ const InterWebcam = () => {
 
     return (
         <WebcamContainer>
-            <Webcam height={300} width={225} />
+            <Webcam height={400} width={300} />
         </WebcamContainer>
     );
 }

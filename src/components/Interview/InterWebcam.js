@@ -5,7 +5,7 @@ import Webcam from "react-webcam";
 const WebcamContainer = styled.div`
     position: absolute;
     z-index: 100;
-    bottom: 24px;
+    bottom: 72px;
     right: 24px;
 `
 

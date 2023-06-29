@@ -6,7 +6,6 @@ function Interview() {
 
   return (
     <>
-        interview
         <InterWebcam /> 
         <Video />
     </>

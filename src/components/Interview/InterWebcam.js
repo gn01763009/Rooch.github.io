@@ -5,7 +5,7 @@ import Webcam from "react-webcam";
 const WebcamContainer = styled.div`
     position: fixed;
     bottom: -60px;
-    right: 24px;
+    right: 48px;
 `
 
 const InterWebcam = () => {

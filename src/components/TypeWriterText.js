@@ -102,7 +102,7 @@ const TypeWriterText = () => {
     </Title>
     <SubTitle>Bored Of Apes? Try Something New.</SubTitle>
     <ButtonContainer>
-      <Link to="/demo"><Button text="Demo" link="/demo" /></Link>
+      <Link to="/list"><Button text="Demo" link="/list" /></Link>
     </ButtonContainer>
     </>
   );

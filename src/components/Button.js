@@ -5,8 +5,8 @@ import styled from 'styled-components'
 
 const Btn = styled.button`
 display: inline-block;
-background-color: ${props => props.theme.text};
-color: ${props => props.theme.body};
+background-color: #FB4A1E;
+color: White;
 outline: none;
 border: none;
 
@@ -26,7 +26,6 @@ position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    border: 2px solid ${props => props.theme.text};
     width: 100%;
     height: 100%;
     border-radius: 50px;

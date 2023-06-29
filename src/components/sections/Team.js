@@ -27,8 +27,8 @@ const Title = styled.h1`
   justify-content: center;
   align-items: center;
   margin: 1rem auto;
-  border-bottom: 2px solid ${(props) => props.theme.text};
   width: fit-content;
+  font-weight: 400;
 
   @media (max-width: 40em){
     font-size: ${(props) => props.theme.fontxl};
@@ -133,10 +133,10 @@ const MemberComponent = ({ img, name = " ", position = " " }) => {
 
 const Team = () => {
   return (
-    <Section id="team">
+    <Section className="py-8" id="team">
       <Suspense fallback={<Loading />}>
         <ConfettiComponent /> </Suspense>
-      <Title>Team</Title>
+      <Title>Our Team</Title>
       <Container>
         <MemberComponent img={img3} name="Reggie Lien" position="Co-Founder" />
         <MemberComponent img={img6} name="Sam Huang" position="Director" />

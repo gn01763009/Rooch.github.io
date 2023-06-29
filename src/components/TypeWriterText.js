@@ -13,16 +13,15 @@ const Title = styled.h2`
 
   span {
     text-transform: uppercase;
-    font-family: "Akaya Telivigala", cursive;
   }
   .text-1{
-      color: blue;
+      color: #07B6E2;
   }
   .text-2{
       color: orange;
   }
   .text-3{
-      color: red;
+      color: #FB4A1E;
   }
 
   @media (max-width: 70em) {
@@ -100,7 +99,7 @@ const TypeWriterText = () => {
       <SubTitle>Receive personalized guidance and feedback from our AI interview coach
       </SubTitle>
       <ButtonContainer>
-        <Link to="/lists"><Button text="Demo" link="/lists" /></Link>
+        <Link to="/lists"><Button text="Try it out" link="/lists" /></Link>
       </ButtonContainer>
     </>
   );

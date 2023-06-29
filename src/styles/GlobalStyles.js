@@ -34,6 +34,26 @@ a{
 .logo{
     width: 76px;
 }
+.btn-primary{
+    background-color: #FB4A1E;
+    color: White;
+    transition: all 0.2s ease;
+}
+.btn-primary:hover{
+    background-color: #FF5F3A;
+    color: White;
+    transform: scale(0.9);
+}
+.btn-secondary{
+    background-color: #363636;
+    color: White;
+    transition: all 0.2s ease;
+}
+.btn-secondary:hover{
+    background-color: #4D4D4D;
+    color: White;
+    transform: scale(0.9);
+}
 .mark-value{
     
 }

@@ -152,7 +152,8 @@ const Navigation = () => {
           </MenuItem>
         </Menu>
         <div className="desktop">
-          <Link to="/lists"><Button text="Find some jobs"/></Link>
+          <Link to="/lists" className="mr-4"><Button text="Find some jobs"/></Link>
+          <Link to="/" className="mr-4">Hi Terry</Link>
         </div>
       </NavBar>
     </Section>

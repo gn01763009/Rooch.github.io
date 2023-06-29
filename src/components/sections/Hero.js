@@ -114,7 +114,6 @@ const Hero = () => {
         <Box>
           <Suspense fallback={<Loading />}>
             <CoverVideo /></Suspense>
-
         </Box>
 
 

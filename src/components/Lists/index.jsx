@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
@@ -62,6 +62,10 @@ const Lists = () => {
   const [state, setState] = useState(ListData.map((list) => list.click));
   const navigate = useNavigate();
 
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   const handleClick = (idx) => {
     setState((prevState) => {
       const newArr = [...prevState];
@@ -117,7 +121,7 @@ const Lists = () => {
                   {list.interviews.map((interview, idx) => {
                     return (
                       <button
-                        className="px-8 py-3 bg-gray-100 rounded-full hover:bg-gray-300 cursor-pointer text-lg"
+                        className="px-8 py-3 rounded-full btn-secondary cursor-pointer text-lg"
                         key={idx}
                         onClick={() => {navigate('/avatar');}}
                       >

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useLayoutEffect } from 'react';
 import Lottie from "lottie-react";
 import AILoading from "./ai-loading.json";
 import { useNavigate } from 'react-router-dom';
@@ -10,6 +10,10 @@ const Loading = () => {
   const [state, setState] = useState(0);
   const wording = useRef(null);
   const navigate = useNavigate();
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
   useEffect(() => {
     const timer =  setInterval(() => {

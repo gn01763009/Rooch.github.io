@@ -1,7 +1,9 @@
 import React, { useEffect, useLayoutEffect } from 'react'
 import Pointer from './pointer'
+import { useNavigate } from 'react-router-dom';
 
 function Report() {
+  const navigate = useNavigate();
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [])
@@ -60,10 +62,10 @@ function Report() {
           </div>
       </div>
       <div className='flex justify-around my-8'>
-        <button className="w-1/3 p-3 bg-gray-100 rounded-md hover:bg-gray-300">
+        <button onClick={() => {navigate('/loading')}} className="w-1/3 p-3 btn-secondary rounded-md">
           Try Again
         </button>
-        <button className="w-1/3 p-3 bg-gray-100 rounded-md hover:bg-gray-300">
+        <button onClick={() => {navigate('/lists')}} className="w-1/3 p-3 btn-secondary rounded-md">
           Try Other Jobs
         </button>
       </div>

@@ -5,6 +5,11 @@ import GIF from '../assets/Home Video.mp4'
 
 const VideoContainer = styled.div`
 width: 100%;
+border-radius: 2rem;
+padding-top: 2rem;
+padding-left: 2rem;
+padding-right: 2rem;
+border: 3px solid ${props => props.theme.text};
 
 video{
     width: 100%;

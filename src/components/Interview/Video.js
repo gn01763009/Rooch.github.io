@@ -28,13 +28,12 @@ const CoverContainer = styled.div`
     padding: 54px;
     z-index: 999;
     top: 0;
-    font-size: 160px;
+    font-size:120px;
     color: white;
     width: 100%;
     height: 100%;
     display: flex;
     item-align: center;
-    -webkit-text-stroke: 5px black;
     text-shadow:
        5px 5px 0 #000,
      -1px -1px 0 #000,  
@@ -43,7 +42,7 @@ const CoverContainer = styled.div`
        1px 1px 0 #000;
     div{
         margin: auto;
-        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
     }
 `
 
@@ -63,7 +62,7 @@ const Video = () => {
     })
 
     const playVideo = () => {
-        let playPromise
+        let playPromise;
         if (isEnd) {
             navigate('/report');
             return;

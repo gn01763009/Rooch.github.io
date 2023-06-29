@@ -44,7 +44,7 @@ function Avatar() {
             <p className="text-sm">Position : {avatar.position}</p>
             <p className="text-sm">Language : {avatar.language}</p>
             <p className="text-sm">Country : {avatar.country}</p>
-            <button onClick={() => {navigate('/loading')}} className="w-full p-3 bg-gray-100 rounded-md hover:bg-gray-300">
+            <button onClick={() => {navigate('/loading')}} className="w-full p-3 rounded-md btn-secondary">
               Start 🚀
             </button>
           </div>

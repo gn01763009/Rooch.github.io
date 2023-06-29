@@ -143,8 +143,7 @@ const Navigation = () => {
         </HamburgerMenu>
         <Menu click={click}>
           <Link to="/"><MenuItem>Home</MenuItem></Link>
-          <Link to="/upload"><MenuItem>Upload</MenuItem></Link>
-          <Link to="/list"><MenuItem>List</MenuItem></Link>
+          <Link to="/lists"><MenuItem>Lists</MenuItem></Link>
           <Link to="/avatar"><MenuItem>Avatar</MenuItem></Link>
           <Link to="/interview"><MenuItem>Interview</MenuItem></Link>
           <Link to="/report"><MenuItem>Report</MenuItem></Link>

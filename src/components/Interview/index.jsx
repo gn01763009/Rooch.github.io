@@ -5,7 +5,7 @@ function Interview() {
 
   return (
     <>
-        <Video />
+      <Video />
     </>
   );
 }

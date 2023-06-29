@@ -135,25 +135,25 @@ font-size: ${props => props.theme.fontsm};
 `
 
 const Banner = () => {
-  return (
-    <Section>
-        <ImgContainer>
-            <img width={500} height={400}  src={img2} alt="The Weirdos" />
-            <img width={500} height={400}  src={img3} alt="The Weirdos" />
-            <img width={500} height={400}  src={img4} alt="The Weirdos" />
-            <img width={500} height={400}  src={img5} alt="The Weirdos" />
-            <img width={500} height={400}  src={img6} alt="The Weirdos" />
+    return (
+        <Section>
+            <ImgContainer>
+                <img width={500} height={400} src={img2} alt="The Weirdos" />
+                <img width={500} height={400} src={img3} alt="The Weirdos" />
+                <img width={500} height={400} src={img4} alt="The Weirdos" />
+                <img width={500} height={400} src={img5} alt="The Weirdos" />
+                <img width={500} height={400} src={img6} alt="The Weirdos" />
 
-        </ImgContainer>
-        <Title>Join the  <br /> weirdos club  </Title>
-        <BtnContainer>
-        <JoiNow>
-            Join Now
-        </JoiNow>
+            </ImgContainer>
+            <Title>Join the  <br /> Rooch club  </Title>
+            <BtnContainer>
+                <JoiNow>
+                    Join Now
+                </JoiNow>
 
-        </BtnContainer>
-    </Section>
-  )
+            </BtnContainer>
+        </Section>
+    )
 }
 
 export default Banner

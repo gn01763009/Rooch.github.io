@@ -118,7 +118,21 @@ img{
 
 }
 `
+const Title = styled.h1`
+  font-size: ${(props) => props.theme.fontxxl};
+  text-transform: capitalize;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  border-bottom: 2px solid ${(props) => props.theme.text};
+  width: fit-content;
 
+  @media (max-width: 40em) {
+    font-size: ${(props) => props.theme.fontxl};
+  }
+`;
 const NftItem = ({ img, name = "", offer = "", price = "", passRef }) => {
 
   let play = (e) => {
@@ -158,6 +172,7 @@ const Showcase = () => {
 
   return (
     <Section id="showcase">
+      <Title>Success Story</Title>
       <Row direction="none" ref={Row1Ref}>
         <NftItem img={img2} name={"Benjamin Anderson"} offer={"Apple Inc."} price={"US$162,364"} passRef={Row1Ref} />
         <NftItem img={img3} name={"Emily Davis"} offer={"Amazon"} price={"US$129,610"} passRef={Row1Ref} />
@@ -174,7 +189,7 @@ const Showcase = () => {
 
 
       </Row>
-    </Section>
+    </Section >
   )
 }
 

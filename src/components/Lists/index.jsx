@@ -119,7 +119,7 @@ const Lists = () => {
                       <button
                         className="px-8 py-3 bg-gray-100 rounded-full hover:bg-gray-300 cursor-pointer text-lg"
                         key={idx}
-                        onClick={() => {navigate('/interview');}}
+                        onClick={() => {navigate('/loading');}}
                       >
                         {interview}
                       </button>

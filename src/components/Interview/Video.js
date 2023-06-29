@@ -1,10 +1,10 @@
-import React, { useLayoutEffect, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useLayoutEffect, useRef } from "react";
 import styled from 'styled-components'
 import video_1 from "../../assets/Avatars/avatar_indian_1.mp4"
 import video_2 from "../../assets/Avatars/avatar_indian_2.mp4"
 import video_3 from "../../assets/Avatars/avatar_indian_3.mp4"
 import InterWebcam from "./InterWebcam";
+import {useNavigate} from "react-router-dom";
 
 const VideoContainer = styled.div`
 position: relative;

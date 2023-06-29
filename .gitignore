@@ -28,3 +28,4 @@
 # Build artifacts
 *.log
 hosting.YnVpbGQ.cache
+package-lock.json

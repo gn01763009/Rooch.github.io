@@ -8,6 +8,7 @@ import Home from "./components/Home/Home";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Demo from "./components/Demo";
+import Interview from "./components/Interview/Interview";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/demo" element={<Demo />} />
+            <Route path="/interview" element={<Interview />} />
           </Routes>
           <Footer />
           {/* <ScrollToTop scrollPosition={y}/> */}

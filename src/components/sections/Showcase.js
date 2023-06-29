@@ -171,9 +171,12 @@ const Showcase = () => {
   const Row2Ref = useRef(null);
 
   return (
+
     <Section id="showcase">
       <Title>Success Story</Title>
+
       <Row direction="none" ref={Row1Ref}>
+
         <NftItem img={img2} name={"Benjamin Anderson"} offer={"Apple Inc."} price={"US$162,364"} passRef={Row1Ref} />
         <NftItem img={img3} name={"Emily Davis"} offer={"Amazon"} price={"US$129,610"} passRef={Row1Ref} />
         <NftItem img={img4} name={"William Johnson"} offer={"Microsoft"} price={"US$212,164"} passRef={Row1Ref} />

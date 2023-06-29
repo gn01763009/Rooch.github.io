@@ -11,9 +11,9 @@ function Home() {
   return (
     <>
       <Hero />
-      <About />
-      <Roadmap />
       <Showcase />
+      <Roadmap />
+      <About />
       <Team />
       {/* <Faq /> */}
     </>

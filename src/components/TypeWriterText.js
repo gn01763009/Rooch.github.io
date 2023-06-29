@@ -100,7 +100,7 @@ const TypeWriterText = () => {
       <SubTitle>Receive personalized guidance and feedback from our AI interview coach
       </SubTitle>
       <ButtonContainer>
-        <Link to="/list"><Button text="Demo" link="/list" /></Link>
+        <Link to="/lists"><Button text="Demo" link="/lists" /></Link>
       </ButtonContainer>
     </>
   );

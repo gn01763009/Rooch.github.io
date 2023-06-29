@@ -13,7 +13,7 @@ import Lists from "./components/Lists";
 import Avatar from "./components/Avatar";
 import Interview from "./components/Interview";
 import Report from "./components/Report";
-import Loading from "./components/Loading";
+import AILoading from "./components/AILoading";
 
 const Section = styled.section`
 min-height: ${props => `calc(100vh - ${props.theme.navHeight})`   };
@@ -57,7 +57,7 @@ function App() {
             <Route path="/lists" element={<Section><Container><Lists /></Container></Section>} />
             <Route path="/avatar" element={<Section><Container><Avatar /></Container></Section>} />
             <Route path="/report" element={<Section><Container><Report /></Container></Section>} />
-            <Route path="/loading" element={<Section><Container><Loading /></Container></Section>} />
+            <Route path="/loading" element={<Section><Container><AILoading /></Container></Section>} />
           </Routes>
           <Footer />
           {/* <ScrollToTop scrollPosition={y}/> */}

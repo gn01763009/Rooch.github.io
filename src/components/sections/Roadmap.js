@@ -211,7 +211,7 @@ const Roadmap = () => {
 
   return (
     <Section id="roadmap">
-      <Title>Roadmap</Title>
+      <Title>Your Stage </Title>
       <Container>
         <SvgContainer>
           <DrawSvg />
@@ -220,28 +220,24 @@ const Roadmap = () => {
           <Item>&nbsp;</Item>
           <RoadMapItem
             addToRef={addToRefs}
-            title="Grand Opening"
-            subtext="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat."
+            title="Technical Stage"
+            subtext="Technical Skills Assessment: Evaluate the interviewee's proficiency in technical knowledge and problem-solving abilities."
           />
           <RoadMapItem
             addToRef={addToRefs}
-            title="Great Benefits"
-            subtext="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat."
+            title="Personality Assessment"
+            subtext="Cultural Fit: Assess the interviewee's alignment with the company's values and work environment."
           />
           <RoadMapItem
             addToRef={addToRefs}
-            title="Early Access"
-            subtext="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat."
+            title="Foreign Language Interview Practice"
+            subtext="Accent Variation: Allow interviewees to practice interviews with different accents to improve their communication skills in cross-cultural settings."
           />
+
           <RoadMapItem
             addToRef={addToRefs}
-            title="New Merch"
-            subtext="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat."
-          />
-          <RoadMapItem
-            addToRef={addToRefs}
-            title="Holders Ranking"
-            subtext="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat."
+            title="Salary Negotiation"
+            subtext="Provide resources and guidance for interviewees to research industry standards and salary expectations."
           />
         </Items>
       </Container>

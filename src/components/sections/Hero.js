@@ -7,7 +7,7 @@ const CoverVideo = lazy(() => import('../CoverVideo'));
 const TypeWriterText = lazy(() => import('../TypeWriterText'));
 
 const Section = styled.section`
-min-height: ${props => `calc(100vh - ${props.theme.navHeight})`   };
+min-height: ${props => `calc(100vh - ${props.theme.navHeight})`};
 width: 100vw;
 position: relative;
 background-color: ${props => props.theme.body};
@@ -107,21 +107,21 @@ const Hero = () => {
   return (
     <Section id="hero">
       <Container>
-      <Box>
-        <Suspense fallback={<Loading />}>
-          <TypeWriterText /></Suspense>
+        <Box>
+          <Suspense fallback={<Loading />}>
+            <TypeWriterText /></Suspense>
         </Box>
         <Box>
-        <Suspense fallback={<Loading />}>
-          <CoverVideo /></Suspense>
-          
+          <Suspense fallback={<Loading />}>
+            <CoverVideo /></Suspense>
+
         </Box>
 
-        
+
         <Round>
-        <Circle>
-          &#x2193; 
-        </Circle>
+          <Circle>
+            &#x2193;
+          </Circle>
           <img width={500} height={400} src={RoundTextBlack} alt="NFT" />
         </Round>
 

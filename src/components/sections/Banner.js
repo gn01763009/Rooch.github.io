@@ -14,7 +14,7 @@ position: relative;
 border-top: 2px solid ${props => props.theme.text};
 border-bottom: 2px solid ${props => props.theme.text};
 
-background-color: ${props =>`rgba(${props.theme.textRgba},0.90)`};
+background-color: ${props => `rgba(${props.theme.textRgba},0.90)`};
 
 display: flex;
 justify-content: center;
@@ -144,23 +144,23 @@ transform:scale(0.9);
 const Banner = () => {
   return (
     <Section>
-        <ImgContainer>
-        <img src={img2} width="500" height="400"  alt="The Weirdos" />
-        <img src={img3} width="500" height="400"  alt="The Weirdos" />
-        <img src={img4} width="500" height="400"  alt="The Weirdos" />
-        <img src={img5} width="500" height="400"  alt="The Weirdos" />
-        <img src={img6} width="500" height="400"  alt="The Weirdos" />
+      <ImgContainer>
+        <img src={img2} width="500" height="400" alt="The Weirdos" />
+        <img src={img3} width="500" height="400" alt="The Weirdos" />
+        <img src={img4} width="500" height="400" alt="The Weirdos" />
+        <img src={img5} width="500" height="400" alt="The Weirdos" />
+        <img src={img6} width="500" height="400" alt="The Weirdos" />
 
-        </ImgContainer>
-        <Title>Join the
-        <br/>
-        Weirdos Club
-        </Title>
-        <BtnContainer>
+      </ImgContainer>
+      <Title>Join the
+        <br />
+        Rooch Club
+      </Title>
+      <BtnContainer>
         <JoinNow>
-    Join Now
+          Join Now
         </JoinNow>
-        </BtnContainer>
+      </BtnContainer>
     </Section>
   )
 }

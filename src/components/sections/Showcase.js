@@ -171,6 +171,7 @@ const Showcase = () => {
   const Row2Ref = useRef(null);
 
   return (
+
     <Section id="showcase">
       <Title>Success Story</Title>
       <Row direction="none" ref={Row1Ref} style={{animationDuration: '20s'}}>
